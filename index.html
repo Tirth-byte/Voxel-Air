@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Voxel Architect v5.1 - Sync Update</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="ui">
+        <div class="title-bar">
+            <div class="os-label">ARCHITECT OS 5.1</div>
+        </div>
+
+        <!-- System Status & Stats -->
+        <div id="mode">SYSTEM READY</div>
+
+        <div class="stat-row">
+            <span>ACTIVE VOXELS</span>
+            <span id="count" style="color: #fff; font-weight: 500;">0</span>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="controls-list">
+            <div class="control-item">
+                <div class="control-dot"></div> 2 FISTS: HOLD TO RESET
+            </div>
+            <div class="control-item">
+                <div class="control-dot"></div> 2 PALMS: ROTATE
+            </div>
+            <div class="control-item">
+                <div class="control-dot"></div> PINCH: DRAW / ERASE
+            </div>
+        </div>
+    </div>
+
+    <!-- Action Bar for Toggles -->
+    <div class="action-bar">
+        <button id="btn-phone" class="glass-btn" title="Toggle Phone Mode">
+            📱 Phone Mode
+        </button>
+        <button id="btn-fullscreen" class="glass-btn" title="Fullscreen">
+            ⛶ Fullscreen
+        </button>
+    </div>
+
+    <video id="input_video" autoplay playsinline></video>
+    <canvas id="three_canvas"></canvas>
+    <canvas id="biometric_canvas"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <script type="module" src="./main.js"></script>
+</body>
+
+</html>
